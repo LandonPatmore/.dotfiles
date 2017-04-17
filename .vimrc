@@ -33,6 +33,7 @@ set number "show line numbers
 set laststatus=2 "for airline
 set t_Co=256
 set hidden
+set backspace=2
 
 "For proper tabbing and bracket insertion"
 inoremap {<cr> {<cr>}<c-o><s-o>
