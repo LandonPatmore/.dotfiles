@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+#Allows TMUX to work properly without throwing 256 color warning
+export TERM="xterm-256color"
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/landon/.oh-my-zsh
 
@@ -32,7 +35,7 @@ HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="false"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -86,7 +89,10 @@ alias vim="vim -u /Users/landon/.dotfiles/.vimrc"
 alias h="history"
 
 # Git aliases
-alias st="git status"
+alias st="git status -u"
 alias co="git commit -m"
-alias ad="git add ."
-alias pu="git push"
+alias add="git add"
+alias push="git push"
+alias br="git branch -va"
+alias lo="git log"
+alias ls="ls | sort"
