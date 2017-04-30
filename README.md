@@ -1,7 +1,7 @@
 # dotfiles
 My collection of dot files.
 ----
-###Getting Started
+### Getting Started
 
 * Navigate to your home directory and clone the repo.
 
