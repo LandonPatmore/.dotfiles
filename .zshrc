@@ -31,9 +31,8 @@ alias h="history"
 
 # Git aliases
 alias st="git status -u"
-alias co="git commit -m"
+alias co="git commit"
 alias add="git add"
 alias push="git push"
 alias br="git branch -va"
 alias lo="git log"
-alias ls="ls | sort"
