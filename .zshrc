@@ -7,7 +7,11 @@ export TERM="xterm-256color"
 # Path to your oh-my-zsh installation. (Change based on own path)
 export ZSH=/Users/landon/.oh-my-zsh
 
+# Theming
+
 ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_CONTEXT_TEMPLATE="%n"
+POWERLEVEL9K_COLOR_SCHEME='light'
 
 HYPHEN_INSENSITIVE="true"
 
