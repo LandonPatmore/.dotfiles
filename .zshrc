@@ -15,7 +15,7 @@ POWERLEVEL9K_COLOR_SCHEME='light'
 
 HYPHEN_INSENSITIVE="true"
 
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTIONS="false"
 
 COMPLETION_WAITING_DOTS="false"
 
@@ -43,3 +43,6 @@ alias log="git log"
 alias pull="git pull"
 alias checkout="git checkout"
 alias clone="git clone"
+alias merge="git merge"
+alias reset="git reset"
+alias stash="git stash"
