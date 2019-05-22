@@ -32,6 +32,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Personal Aliases
 alias vim="vim -u /Users/landon/.dotfiles/.vimrc"
 alias h="history"
+alias g="cd && cd go && cd src"
 
 # Git aliases
 alias st="git status -u"
@@ -42,7 +43,11 @@ alias branch="git branch -va"
 alias log="git log"
 alias pull="git pull"
 alias checkout="git checkout"
-alias clone="git clone"
+alias clone="git clone --recursive"
 alias merge="git merge"
 alias reset="git reset"
 alias stash="git stash"
+alias short="git shortlog -s -n"
+alias prune="git remote prune"
+
+export PATH="/usr/local/opt/ruby/bin:$PATH"
