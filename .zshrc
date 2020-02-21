@@ -33,6 +33,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 alias vim="vim -u /Users/landon/.dotfiles/.vimrc"
 alias h="history"
 alias g="cd && cd go && cd src"
+alias ls="ls -al"
 
 # Git aliases
 alias st="git status -u"
@@ -40,14 +41,22 @@ alias co="git commit"
 alias add="git add"
 alias push="git push"
 alias branch="git branch -va"
-alias log="git log"
+alias log="git log --stat --pretty=medium --graph"
 alias pull="git pull"
 alias checkout="git checkout"
 alias clone="git clone --recursive"
 alias merge="git merge"
 alias reset="git reset"
 alias stash="git stash"
-alias short="git shortlog -s -n"
+alias short="git shortlog -sne"
 alias prune="git remote prune"
+alias pruneL="git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
+alias count="git rev-list --count HEAD"
+alias diff="git diff"
+alias rename="git branch -m"
 
-export PATH="/usr/local/opt/ruby/bin:$PATH"
+# SSH Connections
+alias server="ssh harrier@192.168.10.1"
+
+export PATH="/usr/local/opt/ruby/bin:$PATH:/Users/landon/Library/Android/sdk/platform-tools:/usr/local/bin/git-extensions"
+export ANDROID_HOME=/Users/landon/Library/Android/sdk

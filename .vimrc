@@ -33,9 +33,17 @@ set number "show line numbers
 set laststatus=2 "for airline
 set t_Co=256
 set hidden
+set cursorline
+set colorcolumn=80
 set backspace=2
+set ignorecase
+set smartcase
+
 
 "For proper tabbing and bracket insertion"
 inoremap {<cr> {<cr>}<c-o><s-o>
 inoremap [<cr> [<cr>]<c-o><s-o>
 inoremap (<cr> (<cr>)<c-o><s-o>
+
+"Mapping buttons"
+map <C-o> :NERDTreeToggle<CR>
