@@ -12,13 +12,9 @@ export ZSH=/Users/landon/.oh-my-zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_CONTEXT_TEMPLATE="%n"
 POWERLEVEL9K_COLOR_SCHEME='light'
-
 HYPHEN_INSENSITIVE="true"
-
 ENABLE_CORRECTIONS="false"
-
 COMPLETION_WAITING_DOTS="false"
-
 HIST_STAMPS="mm/dd/yyyy"
 
 plugins=(git)
@@ -50,13 +46,10 @@ alias reset="git reset"
 alias stash="git stash"
 alias short="git shortlog -sne"
 alias prune="git remote prune"
-alias pruneL="git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
+alias prunelocal="git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 alias count="git rev-list --count HEAD"
 alias diff="git diff"
 alias rename="git branch -m"
-
-# SSH Connections
-alias server="ssh harrier@192.168.10.1"
 
 export PATH="/usr/local/opt/ruby/bin:$PATH:/Users/landon/Library/Android/sdk/platform-tools:/usr/local/bin/git-extensions"
 export ANDROID_HOME=/Users/landon/Library/Android/sdk
