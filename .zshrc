@@ -1,17 +1,19 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-#Allows TMUX to work properly without throwing 256 color warning
+# Allows TMUX to work properly without throwing 256 color warning
 export TERM="xterm-256color"
 
 # Path to your oh-my-zsh installation. (Change based on own path)
 export ZSH=/Users/landon/.oh-my-zsh
 
 # Theming
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_CONTEXT_TEMPLATE="%n"
-POWERLEVEL9K_COLOR_SCHEME='light'
 HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTIONS="false"
 COMPLETION_WAITING_DOTS="false"
@@ -50,6 +52,15 @@ alias prunelocal="git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git
 alias count="git rev-list --count HEAD"
 alias diff="git diff"
 alias rename="git branch -m"
+alias lg="lazygit"
 
 export PATH="/usr/local/opt/ruby/bin:$PATH:/Users/landon/Library/Android/sdk/platform-tools:/usr/local/bin/git-extensions"
 export ANDROID_HOME=/Users/landon/Library/Android/sdk
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/landon/.sdkman"
+[[ -s "/Users/landon/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/landon/.sdkman/bin/sdkman-init.sh"
+
