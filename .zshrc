@@ -9,7 +9,7 @@ fi
 export TERM="xterm-256color"
 
 # Path to your oh-my-zsh installation. (Change based on own path)
-export ZSH=/Users/landon/.oh-my-zsh
+export ZSH=/Users/lpatmore/.oh-my-zsh
 
 # Theming
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -28,12 +28,12 @@ export EDITOR='vim'
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Personal Aliases
-alias vim="vim -u /Users/landon/.dotfiles/.vimrc"
+alias vim="vim -u /Users/lpatmore/.dotfiles/.vimrc"
 alias h="history"
 alias g="cd && cd go && cd src"
 alias ls="ls -al"
 
-# Git aliases
+# Git Aliases
 alias st="git status -u"
 alias co="git commit"
 alias add="git add"
@@ -51,16 +51,15 @@ alias prune="git remote prune"
 alias prunelocal="git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 alias count="git rev-list --count HEAD"
 alias diff="git diff"
-alias rename="git branch -m"
 alias lg="lazygit"
-
-export PATH="/usr/local/opt/ruby/bin:$PATH:/Users/landon/Library/Android/sdk/platform-tools:/usr/local/bin/git-extensions"
-export ANDROID_HOME=/Users/landon/Library/Android/sdk
+alias rebase="git rebase"
+alias pick="git cherry-pick"
+alias show="git show"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/landon/.sdkman"
-[[ -s "/Users/landon/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/landon/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="/Users/lpatmore/.sdkman"
+[[ -s "/Users/lpatmore/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/lpatmore/.sdkman/bin/sdkman-init.sh"
 

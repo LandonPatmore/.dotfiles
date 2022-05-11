@@ -25,8 +25,8 @@ colorscheme codedark
 let g:airline_theme='codedark' "airline theme (status bar)
 
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set relativenumber "shows relative numbers to current line
 set number "show line numbers
