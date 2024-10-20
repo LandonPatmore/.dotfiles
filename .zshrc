@@ -9,7 +9,7 @@ fi
 export TERM="xterm-256color"
 
 # Path to your oh-my-zsh installation. (Change based on own path)
-export ZSH=/Users/lpatmore/.oh-my-zsh
+export ZSH=/home/landon/.oh-my-zsh
 
 # Theming
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -28,7 +28,7 @@ export EDITOR='vim'
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Personal Aliases
-alias vim="vim -u /Users/lpatmore/.dotfiles/.vimrc"
+alias vim="vim -u /home/landon/.dotfiles/.vimrc"
 alias h="history"
 alias g="cd && cd go && cd src"
 alias ls="ls -al"
@@ -58,8 +58,4 @@ alias show="git show"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/lpatmore/.sdkman"
-[[ -s "/Users/lpatmore/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/lpatmore/.sdkman/bin/sdkman-init.sh"
 
