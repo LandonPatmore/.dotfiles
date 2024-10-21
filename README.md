@@ -10,6 +10,8 @@ My collection of dot files.
 6. open `zshrc` and edit `ZSH` file path
 7. download `Powerlevel10K` theme
 8. download `Vundle`
-9. `source ~/.zshrc`
-10. go into vim and type `PluginInstall`
-11. done
+9. `ln -s ~/.dotfiles/.vimrc ~/.vimrc`
+10. `ln -s ~/.dotfiles/.p10k.zsh ~/.p10k.zsh`
+11. `source ~/.zshrc`
+12. go into vim and type `PluginInstall`
+13. done
