@@ -30,11 +30,17 @@ export EDITOR='vim'
 
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Personal Aliases
+# Editor aliases
+NVIM_CMD="nvim -u init.lua"
+
+alias vim="$NVIM_CMD"
+alias nvim="$NVIM_CMD"
+
+# Personal aliases
 alias h="history"
 alias ls="ls -al"
 
-# Git Aliases
+# Git aliases
 alias st="git status -u"
 alias co="git commit"
 alias add="git add"
