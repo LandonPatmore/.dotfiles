@@ -5,6 +5,8 @@ CONFIG_FILES_DIR="$HOME/.dotfiles/.config"
 ZSH_DIR="$CONFIG_FILES_DIR/zsh"
 OH_MY_ZSH_DIR="$ZSH_DIR/.oh-my-zsh"
 ZSHRC_URL="https://github.com/ohmyzsh/ohmyzsh"
+POWERLEVEL10K_URL="https://github.com/romkatv/powerlevel10k.git"
+POWERLEVEL10K_DIR="$OH_MY_ZSH_DIR/custom/themes/powerlevel10k"
 
 # Function to check the OS type and install Zsh accordingly
 install_zsh() {
@@ -59,8 +61,8 @@ set_default_shell() {
 }
 
 # Step 1: Unset ZSH for oh-my-zsh
-echo "Step 1: Running the installer with ZSH unset..."
-ZSH="sh install.sh"
+echo "Step 1: Removing existing oh-my-zsh folder..."
+rm -rf $OH_MY_ZSH_DIR
 
 # Step 2: Create a symbolic link for .zshenv from dotfiles to home directory
 echo "Step 2: Creating symbolic link for .zshenv..."
@@ -96,10 +98,19 @@ fi
 
 # Step 7: Use rsync to move the .oh-my-zsh directory to the new location
 echo "Step 7: Using rsync to move .oh-my-zsh to $OH_MY_ZSH_DIR..."
-rsync -avq --ignore-existing $HOME/.oh-my-zsh/ $OH_MY_ZSH_DIR/
+mv $HOME/.oh-my-zsh/ $OH_MY_ZSH_DIR/
 
-# Step 8: Change shell to zsh
-echo "Step 8: Changing the default shell to zsh..."
+# Step 8: Add theme
+echo "Step 8: Checking if Powerlevel10K is already cloned..."
+if [ ! -d "$POWERLEVEL10K_DIR" ]; then
+  echo "Cloning Powerlevel10K repository..."
+  git clone $POWERLEVEL10K_URL $POWERLEVEL10K_DIR
+else
+  echo "Powerlevel10K is already installed at $POWERLEVEL10K_DIR. Skipping clone."
+fi
+
+# Step 9: Change shell to zsh
+echo "Step 9: Changing the default shell to zsh..."
 
 check_zsh
 set_default_shell
