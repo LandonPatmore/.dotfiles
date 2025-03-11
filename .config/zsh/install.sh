@@ -92,7 +92,7 @@ fi
 
 # Step 6: Use rsync to move the .oh-my-zsh directory to the new location
 echo "Step 6: Using rsync to move .oh-my-zsh to $OH_MY_ZSH_DIR..."
-rsync -av --ignore-existing $HOME/.oh-my-zsh/ $OH_MY_ZSH_DIR/
+rsync -avq --ignore-existing $HOME/.oh-my-zsh/ $OH_MY_ZSH_DIR/
 
 # Step 7: Change shell to zsh
 echo "Step 7: Changing the default shell to zsh..."
