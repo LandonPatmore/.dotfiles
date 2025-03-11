@@ -1,15 +1,15 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ -r "${XDG_CONFIG_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CONFIG_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # Allows TMUX to work properly without throwing 256 color warning
 export TERM="xterm-256color"
 
 # Path to your oh-my-zsh installation. (Change based on own path)
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=$ZDOTDIR/.oh-my-zsh
 
 # UTF8
 export LC_ALL=en_US.UTF-8
@@ -28,13 +28,8 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='vim'
 
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Editor aliases
-NVIM_CMD="nvim -u init.lua"
-
-alias vim="$NVIM_CMD"
-alias nvim="$NVIM_CMD"
+alias vim="nvim"
 
 # Personal aliases
 alias h="history"
@@ -64,6 +59,5 @@ alias pick="git cherry-pick"
 alias show="git show"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f $XDG_CONFIG_HOME/powerlevel10k/.p10k.zsh ]] || source $XDG_CONFIG_HOME/powerlevel10k/.p10k.zsh
 
-export PATH=/opt/homebrew/opt/ruby/bin:$PATH
