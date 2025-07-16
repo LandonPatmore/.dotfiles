@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Variables
-CONFIG_FILES_DIR="$HOME/.dotfiles/.config"
-OH_MY_ZSH_DIR="$CONFIG_FILES_DIR/zsh/.oh-my-zsh"
+OH_MY_ZSH_DIR="$HOME/.dotfiles/zsh/.oh-my-zsh"
 POWERLEVEL10K_URL="https://github.com/romkatv/powerlevel10k.git"
 POWERLEVEL10K_DIR="$OH_MY_ZSH_DIR/custom/themes/powerlevel10k"
 

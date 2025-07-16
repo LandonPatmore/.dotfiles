@@ -1,11 +1,4 @@
-if [[ -z "$XDG_CONFIG_HOME" ]]
+if [[ -z "$DOT_FILES" ]]
 then
-  export XDG_CONFIG_HOME="$HOME/.dotfiles/.config"
+  export DOT_FILES="$HOME/.dotfiles"
 fi
-
-if [[ -d "$XDG_CONFIG_HOME/zsh" ]]
-then
-  export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-fi
-
-
